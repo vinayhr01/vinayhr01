@@ -3,7 +3,6 @@ import { Icons } from './Icons';
 
 const contactItems = [
   { icon: Icons.mail, label: 'Email', value: 'vinayhr1211@gmail.com', href: 'mailto:vinayhr1211@gmail.com' },
-  { icon: Icons.phone, label: 'Phone', value: '+91 9743203936', href: 'tel:+919743203936' },
   { icon: Icons.mapPin, label: 'Location', value: 'Bengaluru, Karnataka', href: null },
 ];
 
@@ -31,7 +30,7 @@ export function Contact() {
             </p>
           </div>
 
-          <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-3xl mx-auto">
+          <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-2 gap-4 max-w-3xl mx-auto">
             {contactItems.map((item, i) => (
               <div
                 key={item.label}

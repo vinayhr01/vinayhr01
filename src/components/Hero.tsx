@@ -17,12 +17,12 @@ export function Hero() {
       <div className="max-w-5xl mx-auto px-4 sm:px-6 py-20">
         <div className="max-w-2xl">
           {/* Status */}
-          <div className="animate-fade-up delay-0">
+          {/* <div className="animate-fade-up delay-0">
             <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-yellow-500/10 text-yellow-600 dark:text-yellow-400 text-xs font-medium border border-yellow-500/20">
               <span className="w-1.5 h-1.5 bg-green-500 rounded-full" />
               Available for work
             </span>
-          </div>
+          </div> */}
 
           {/* Name */}
           <h1 className="mt-6 text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight animate-fade-up delay-1">

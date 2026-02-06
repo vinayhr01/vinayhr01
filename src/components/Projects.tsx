@@ -1,17 +1,25 @@
 import { useScrollReveal } from '../hooks/useScrollReveal';
 import { Icons } from './Icons';
 
-const projects = [
+const personal_projects = [
   {
     title: 'Amazonia E-Commerce',
     description: 'Full-stack MERN app with auth, cart, PayPal integration. Optimized MongoDB queries with indexing for 50% better performance.',
     tech: ['MongoDB', 'Express', 'React', 'Node.js', 'Redux'],
-    github: 'https://github.com/vinayhr01',
+    github: 'https://github.com/vinayhr01/Amazon-Clone-Mern-Project',
+  },
+];
+
+const work_projects_experience = [
+  {
+    title: 'Backend Express.JS APIs',
+    description: '',
+    tech: ['Node.js', 'Express.js', 'Clickhouse', 'PostgreSQL']
   },
   {
     title: 'Real-time Analytics',
     description: 'Processing 20M+ events/day using Kafka stream ingestion and ClickHouse for sub-100ms query times.',
-    tech: ['Node.js', 'Kafka', 'ClickHouse', 'Redis'],
+    tech: ['Node.js', 'Kafka', 'ClickHouse'],
   },
   {
     title: 'ETL Pipeline',
@@ -22,9 +30,8 @@ const projects = [
     title: 'Multi-tenant Platform',
     description: 'Secure multi-tenant backend with PostgreSQL RLS, JWT auth, and RSA/AES-128 encryption.',
     tech: ['Node.js', 'PostgreSQL', 'JWT', 'Keycloak'],
-  },
-];
-
+  }
+]
 export function Projects() {
   const { ref, isVisible } = useScrollReveal();
 
@@ -52,8 +59,13 @@ export function Projects() {
             </a>
           </div>
 
-          <div className="mt-8 grid sm:grid-cols-2 gap-4">
-            {projects.map((project, i) => (
+          <div className="mt-2 grid sm:grid-cols-1 gap-4">
+            <div>
+              <h2 className="mt-2 text-xl sm:text-xl font-bold">
+                Personal Projects
+              </h2>
+            </div>
+            {personal_projects.map((project, i) => (
               <div
                 key={project.title}
                 className={`card rounded-xl p-5 group ${isVisible ? 'animate-fade-up' : 'opacity-0'}`}
@@ -93,6 +105,43 @@ export function Projects() {
               </div>
             ))}
           </div>
+
+          <div className="mt-2 grid sm:grid-cols-1 gap-4">
+            <div>
+              <h2 className="mt-2 text-xl sm:text-xl font-bold">
+                Work Experience Projects
+              </h2>
+            </div>
+            {work_projects_experience.map((project, i) => (
+              <div
+                key={project.title}
+                className={`card rounded-xl p-5 group ${isVisible ? 'animate-fade-up' : 'opacity-0'}`}
+                style={{ animationDelay: `${(i + 1) * 75}ms` }}
+              >
+                <div className="flex items-start justify-between gap-3">
+                  <h3 className="font-semibold group-hover:text-yellow-500 transition-colors">
+                    {project.title}
+                  </h3>
+                </div>
+
+                <p className="mt-2 text-sm text-[var(--text-secondary)] leading-relaxed">
+                  {project.description}
+                </p>
+
+                <div className="mt-4 flex flex-wrap gap-1.5">
+                  {project.tech.map((t) => (
+                    <span
+                      key={t}
+                      className="px-2 py-0.5 text-xs rounded bg-[var(--bg-secondary)] text-[var(--text-muted)]"
+                    >
+                      {t}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+
         </div>
       </div>
     </section>

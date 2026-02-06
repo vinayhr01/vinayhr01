@@ -9,7 +9,7 @@ const experiences = [
     location: 'Bengaluru',
     achievements: [
       'Built data-intensive backend services using Node.js and ClickHouse for real-time analytics',
-      'Engineered Python ETL workflows processing 20GB+ daily with 99.9% reliability',
+      'Engineered Python ETL workflows processing 20GB+ daily with 99.99% reliability',
       'Optimized SQL with indexing, partitioning, materialized views — 80% faster queries',
       'Implemented multi-tenant architecture with PostgreSQL RLS',
       'Built Kafka ingestion services for 20M events/day',

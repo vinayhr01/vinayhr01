@@ -3,7 +3,7 @@ import { Icons } from './Icons';
 
 const stats = [
   { icon: Icons.zap, value: '<100ms', label: 'API Response' },
-  { icon: Icons.server, value: '99.9%', label: 'Uptime' },
+  { icon: Icons.server, value: '99.99%', label: 'Uptime' },
   { icon: Icons.database, value: '20M+', label: 'Events/Day' },
   { icon: Icons.code, value: '70+', label: 'APIs Built' },
 ];
